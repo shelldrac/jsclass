@@ -109,7 +109,7 @@ var cSty = {
 		if (sty[k] != v) sty[k] = v;
 	}
 };
-var oNum = {
+var $num = {
 	limit : function (vl, mn, mx) {
 		var tr;
 		if (mn > mx) {return mn;}
@@ -469,6 +469,9 @@ var $dom = {
 		} else {
 			prCib.appendChild(cur);
 		}
+	},
+	insertFirst : function(cib, par) {
+		par.insertBefore(cib, this.fFirstElm(par));
 	},
 	fNbEnf : function (arg1) {
 		var i, chls = arg1.childNodes, n = chls.length, rs = 0;
